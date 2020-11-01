@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="/"><img src="/assets/home_logo.png" class="logo"></a>
+            <nav>
+                <% if user_signed_in? %>
+                <ul>
+                    <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+                    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+                </ul>
+                <% else %>
+                <ul>
+                    <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+                    <li><%= link_to 'ログイン', new_user_session_path %></li>
+                </ul>
+                
+                
+                <% end %>
+            </nav>
+        </header>
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <%= yield %>
+    </div>
+</body>
+
+                <%
+=begin%>
+ <strong><%= link_to current_user.username, pages_show_path %></strong> 
+<%
+=end%>
+
+
+</html>

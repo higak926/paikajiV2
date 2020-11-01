@@ -1,0 +1,62 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7.22
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --innodb_lock_wait_timeout=2
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306:3306'
+  # mail:
+  #   image: 
+  #   ports:
+  #     - '1025:1025'
+  #     - '8025:8025'
+  store:
+    image: redis:4.0.14-alpine
+    volumes:
+      - redis-data:/var/lib/redis
+    ports:
+      - '6379:6379'
+  app: &app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: paikaji/rails:latest
+    environment:
+      - TZ=Asia/Tokyo
+      - RAILS_ENV=development
+      - DATABASE_HOST=db
+      - DATABASE_NAME=development
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=root
+      # - MAILER_URL_PORT=3000
+      # - SMTP_ADDRESS=mail
+      - REDIS_URL=redis://store:6379
+      # - OPTIMIZE_ID=
+      - BANK_API_URL=http://localhost:8080
+      # - SENDGRID_API_KEY=
+      # - ADMIN_API_TOKEN=${ADMIN_API_TOKEN}
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - bundle:/usr/local/bundle
+    depends_on:
+      - db
+      # - mail
+      - store
+    stdin_open: true
+    tty: true
+  # sidekiq:
+  #   <<: *app
+  #   command: bundle exec sidekiq -C config/sidekiq.yml
+  #   ports: []
+volumes:
+  bundle:
+  mysql-data:
+  redis-data:
+    driver: local
