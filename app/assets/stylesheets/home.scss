@@ -2,7 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .home_image{
-    background-image: url("/assets/space.jpg");
-    color: gainsboro;
+    background-image: url("/assets/home_back.jpeg");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    margin-bottom: 2em;
     padding: 10px;
+    padding-bottom: 20%;
+    width: 100%;
+    h1 {
+        color: greenyellow;
+    }
+}
+
+.slide__image{
+    height: 5%;
+    width :100%;
+}
+
+.slick-dots {
+    li {
+        font-size: 20px !important;
+        button:before {
+            content: "★" !important;
+            font-size: 14px !important;
+            color: rgb(60, 60, 60) !important;
+        }
+    }
 }

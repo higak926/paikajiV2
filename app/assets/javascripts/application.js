@@ -12,9 +12,17 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
 
 //= require jquery3
+//= require jquery.turbolinks 
 //= require popper
 //= require bootstrap
+
+$(function() {
+  $('.slider').slick({
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 2500,
+  });
+});

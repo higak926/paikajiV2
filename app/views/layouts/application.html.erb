@@ -2,45 +2,66 @@
 <html>
 
 <head>
-    <title>App</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <title>App</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
+  <div class="main">
     <div class="container">
-        <header>
-            <a href="/"><img src="/assets/home_logo.png" class="logo"></a>
-            <nav>
-                <% if user_signed_in? %>
-                <ul>
-                    <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
-                    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-                </ul>
-                <% else %>
-                <ul>
-                    <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-                    <li><%= link_to 'ログイン', new_user_session_path %></li>
-                </ul>
-                
-                
-                <% end %>
-            </nav>
-        </header>
+      <header>
+        <a href="/"><img src="/assets/home_logo.png" class="logo"></a>
+        <nav>
+          <% if user_signed_in? %>
+          <ul>
+            <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          </ul>
+          <% else %>
+          <ul>
+            <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+            <li><%= link_to 'ログイン', new_user_session_path %></li>
+          </ul>
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
 
-        <%= yield %>
+          <% end %>
+        </nav>
+      </header>
+      <div class="navi">
+        　　<ul>
+          　　　　<li><a href="/">ホーム</a></li>
+          　　　　<li><a href="/intro">南風について</a></li>
+          　　　　<li><a href="/members">Members</a></li>
+          　　　　<li><a href="#">活動証跡</a></li>
+          　　　　<li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </div>
+
+      <%= yield %>
     </div>
+    <footer>
+      <p>(c)copy right</p>
+    </footer>
+  </div>
 </body>
 
-                <%
+<%
 =begin%>
- <strong><%= link_to current_user.username, pages_show_path %></strong> 
+<strong><%= link_to current_user.username, pages_show_path %></strong>
+<%
+=end%>
+
+<%
+=begin%>
+<% if notice != "" %>
+<p class="notice"><%= notice %></p>
+<% elsif alert != "" %>
+<p class="alert"><%= alert %></p>
+<% end %>
 <%
 =end%>
 
