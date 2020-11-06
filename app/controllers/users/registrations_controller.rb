@@ -9,9 +9,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # def detail
-  #   @user = User.find_by(id: params[:id])
-  # end
+  def detail
+    @user = User.find_by(id: params[:id])
+  end
 
   # POST /resource
   # def create
