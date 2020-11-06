@@ -9,14 +9,61 @@
     padding: 10px;
     padding-bottom: 20%;
     width: 100%;
+    height: 300px;
     h1 {
         color: greenyellow;
     }
 }
 
 .slide__image{
-    height: 5%;
-    width :100%;
+    a{
+        text-decoration: none;
+        .intro {
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            height: 300px;
+            background-image: url("/assets/paikaji_intro.jpg");
+            p {
+                width: 32%;
+                text-align: center;
+                color: white;
+                background: skyblue;
+                font-weight: bold;
+                font-size: 1.5em;
+                font-family :Quicksand, sans-serif;
+            }
+        }
+        .members {
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            height: 300px;
+            background-image: url("/assets/members.jpg");
+            p {
+                width: 32%;
+                text-align: center;
+                color: white;
+                background: skyblue;
+                font-weight: bold;
+                font-size: 1.5em;
+                font-family :Quicksand, sans-serif;
+            }
+        }
+        .activity {
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            height: 300px;
+            background-image: url("/assets/comming_soon.png");
+            p {
+                width: 32%;
+                text-align: center;
+                color: white;
+                background: skyblue;
+                font-weight: bold;
+                font-size: 1.5em;
+                font-family :Quicksand, sans-serif;
+            }
+        }
+    }
 }
 
 .slick-dots {
