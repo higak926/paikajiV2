@@ -2,8 +2,8 @@
   <div class="user-login">
     <h2>ログイン</h2>
 
-    <div class="registered">
-    <h3>ユーザー登録がお済みの方</h3>
+    <div class="form-block">
+      <h3>ユーザー登録がお済みの方</h3>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field" style="margin-bottom: 2em;">
         <%= f.label "メールアドレス" %><br>
@@ -26,12 +26,18 @@
         <%= f.submit "ログインする" %>
       </div>
       <% end %>
+      <div style="text-align: center;">
+        <%= link_to "パスワードをお忘れの方", new_password_path(resource_name) %>
+      </div>
     </div>
 
-    <div class="unregistered">
-    </div>
-    <div style="text-align: center;">
-      <%= render "users/shared/links" %>
+    <div class="form-block">
+      <h3>ユーザー登録がお済みでない方</h3>
+      <div style="text-align: center;">
+        <div class="btn btn-outline-primary bluecor-link">
+          <%= link_to "サインアップ", new_registration_path(resource_name) %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

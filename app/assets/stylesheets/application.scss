@@ -33,10 +33,22 @@ header {
         ul {
         list-style:none;
         float: right;
+            .whitecor-link {
+                a{
+                    color: white;
+                    text-decoration: none;    
+                }
+            }
+            .bluecor-link {
+                a{
+                    color: blue;
+                    text-decoration: none;    
+                }    
+            }
             li {
-                list-style:none;
-                padding: 0 10px;
-                float: left;
+            list-style:none;
+            padding: 0 10px;
+            float: left;
             }
         }
     }
@@ -56,7 +68,7 @@ header {
         letter-spacing: normal; /* 文字間を元に戻す */
         white-space: normal;
         float: left;
-        width: 10%;
+        width: 15%;
         text-align: center;
         border-left: 1px solid blue;
         border-right: 1px solid blue;

@@ -18,13 +18,21 @@
         <nav>
           <% if user_signed_in? %>
           <ul>
-            <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+            <div class="btn btn-success whitecor-link">
+              <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+            </div>
+            <div class="btn btn-secondary whitecor-link">
+              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+            </div>
           </ul>
           <% else %>
           <ul>
-            <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-            <li><%= link_to 'ログイン', new_user_session_path %></li>
+            <div class="btn btn-outline-primary bluecor-link">
+              <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+            </div>
+            <div class="btn btn-primary whitecor-link">
+              <li><%= link_to 'ログイン', new_user_session_path %></li>
+            </div>
           </ul>
 
 

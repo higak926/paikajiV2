@@ -2,39 +2,47 @@
   <div class="user-create">
     <h2>ユーザー登録</h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "users/shared/error_messages", resource: resource %>
+    <div class="form-block">
+      <h3>ユーザー登録がお済みでない方</h3>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
 
-    <table class="formTable">
-      <tr>
-        <div class="field">
-          <th>ユーザー名</th>
-          <td><%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: "ユーザー名を入力" %></td>
-        </div>
-      </tr>
-      <tr>
-        <div class="field">
-          <th>メールアドレス</th>
-          <td><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力" %></td>
-        </div>
-      </tr>
-      <tr>
-        <div class="field">
-          <th>ご希望のパスワード</th>
-          <td>
-            <%= f.password_field :password, autocomplete: "new-password", placeholder: "6〜32文字の半角英数字が使用可" %>
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "もう一度入力してください" %>
-          </td>
-        </div>
-      </tr>
-    </table>
-    <div class="actions sign__btn">
-      <%= f.submit "登録する" %>
+      <table class="formTable">
+        <tr>
+          <div class="field">
+            <th>ユーザー名</th>
+            <td><%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: "ユーザー名を入力" %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="field">
+            <th>メールアドレス</th>
+            <td><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力" %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="field">
+            <th>ご希望のパスワード</th>
+            <td>
+              <%= f.password_field :password, autocomplete: "new-password", placeholder: "6〜32文字の半角英数字が使用可" %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "もう一度入力してください" %>
+            </td>
+          </div>
+        </tr>
+      </table>
+      <div class="actions sign__btn">
+        <%= f.submit "登録する" %>
+      </div>
     </div>
     <% end %>
 
-    <div style="text-align: center;">
-    <%= render "users/shared/links" %>
+    <div class="form-block">
+      <h3>ユーザー登録がお済みの方</h3>
+      <div style="text-align: center;">
+        <div class="btn btn-primary whitecor-link">
+          <%= link_to "ログイン", new_session_path(resource_name) %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -36,21 +36,36 @@
         margin: 1em 0;
         text-align: center;        
     }
-    .registered {
-        padding: 1em;
-        border-top: inset 5px lightskyblue;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.22);
-        h3 {
-            height: 50px;
-            line-height: 50px;
-            font-weight: bold;
-            color: black;
-            border-bottom: inset 1px darkgrey;
-        }
-    }
     .login__btn {
         margin-top: 20px;
         margin-bottom: 10px;
         text-align: center;        
     }
+}
+
+.form-block {
+    padding: 1em;
+    border-top: inset 5px lightskyblue;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.22);
+    margin-bottom: 3em;
+    h3 {
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        color: black;
+        border-bottom: inset 1px darkgrey;
+    }
+}
+
+.whitecor-link {
+    a{
+        color: white;
+        text-decoration: none;    
+    }
+}
+.bluecor-link {
+    a{
+        color: blue;
+        text-decoration: none;    
+    }    
 }
