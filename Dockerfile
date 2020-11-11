@@ -10,6 +10,7 @@ RUN apk add --update build-base \
                      mysql-client \
                      yarn \
                      less \
+                     vim \
                      coreutils \
     && rm -rf /var/cache/apk/* \
     && cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
