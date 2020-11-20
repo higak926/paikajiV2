@@ -39,7 +39,7 @@ services:
     ports:
       - '80:80'
     environment:
-      - PRODUCTION: 'true'
+      PRODUCTION: 'true'
     volumes:
       - .:/app
       - bundle:/usr/local/bundle
