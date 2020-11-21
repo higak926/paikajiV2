@@ -46,6 +46,8 @@ gem 'jquery-turbolinks'
 gem 'ridgepole'
 gem 'webpacker'
 gem 'dotenv-rails'
+gem 'fog-aws'
+gem "asset_sync"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
