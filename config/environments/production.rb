@@ -27,6 +27,8 @@ Rails.application.configure do
   config.assets.css_compressor = :sass
 
   config.assets.enabled=true
+  config.assets.digest=true
+  config.assets.initialize_on_precompile=true
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
@@ -34,7 +36,7 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = 'https://paikaji-bkt.s3-ap-northeast-1.amazonaws.com'
+  config.action_controller.asset_host = '//s3.amazonaws.com/paikaji-bkt'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache

@@ -47,7 +47,11 @@ gem 'ridgepole'
 gem 'webpacker'
 gem 'dotenv-rails'
 gem 'fog-aws'
-gem "asset_sync"
+gem 'asset_sync'
+
+gem 'unicorn', '5.4.1'
+#gem 'therubyracer'
+gem 'mini_racer'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
