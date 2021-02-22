@@ -2,7 +2,11 @@
 <html>
 
 <head>
-  <title>App</title>
+  <title>南風第二章</title>
+  <% if content_for?(:html_description) %>
+    <meta name="description" content="<%= yield(:html_description) %>">
+  <% end %>
+
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
