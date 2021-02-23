@@ -50,8 +50,6 @@ gem 'fog-aws'
 gem 'asset_sync'
 
 gem 'unicorn', '5.4.1'
-#gem 'therubyracer'
-gem 'mini_racer'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -59,6 +57,11 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'rspec-rails'
   gem 'factory_bot_rails', '5.2.0'
+  # gem 'therubyracer', '0.11.0'
+end
+
+group :production do
+  gem 'mini_racer'
 end
 
 group :development do
