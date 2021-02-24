@@ -7,7 +7,7 @@
 }
 
 .home__mod1 {
-    background: linear-gradient(#ccffcc, #66ffcc);
+    background: linear-gradient(#eeffff, #00ffff);
     margin-bottom: 2em;
     border-radius: 25px;
     box-shadow: 0 0 2px gray;
@@ -16,8 +16,6 @@
 
 .box {
     position: relative;
-    margin-top: 2em;
-    margin-bottom: 1em;
     width: 100%;
 }
 
@@ -25,6 +23,18 @@
     content: "";
     display: block;
     padding-top: 50%;
+}
+
+.box p {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    margin: 0;
+    padding: 0;
+    color: #00FFFF; /*文字は白に*/
+    font-weight: bold; /*太字に*/
+    font-size: 4em; /*サイズ2倍*/
+    font-family: Quicksand, sans-serif; /*Google Font*/
 }
 
 .box .bgImg {
@@ -77,10 +87,11 @@
 }
 
 .home__mod2 {
-    background: #FFFF99;
+    background: white;
     margin-bottom: 2em;
-    border-radius: 25px;
-    box-shadow: 0 0 2px gray;
+    border-radius: 0 0 25px 25px;
+    border-top: inset 10px lightskyblue;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.22);
     padding: 1em;
 }
 
