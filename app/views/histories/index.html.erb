@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>歴史</h2>
+
+  <div class="row">
+    <% @histories.each do |history| %>
+    <% if history.id.odd? %>
+    <div class="col-6">
+    <%= image_tag history.image_path %>
+    </div>
+    <div class="col-6">
+      <%= history.year %><br>
+      <p>テーマ：<%= history.theme %></p>
+      <p>詳細：<%= history.details %></p>
+    </div>
+    <% else %>
+    <div class="col-6">
+      <%= history.year %><br>
+      <p>テーマ：<%= history.theme %></p>
+      <p>詳細：<%= history.details %></p>
+    </div>
+    <div class="col-6">
+    <%= image_tag history.image_path %>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+
+
+</div>

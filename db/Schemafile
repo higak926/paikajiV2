@@ -49,3 +49,11 @@ create_table :active_admin_comments do |t|
     t.timestamps
 end
 add_index :active_admin_comments, [:namespace]
+
+create_table :histories do |t|
+    t.string :image_path,           null: false, default: ""
+    t.string :year,                 null: false, default: ""
+    t.string :theme,                null: false, default: ""
+    t.string :details,              null: false, default: ""
+    t.timestamps
+end

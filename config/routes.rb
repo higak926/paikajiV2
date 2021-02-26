@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'home/authentication'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'intro', to: 'intro#index'
+  get 'histories', to: 'histories#index'
   get 'members', to: 'members#index'
 
   devise_for :users, controllers: {
