@@ -17,6 +17,7 @@
 .box {
     position: relative;
     width: 100%;
+    text-align: center;
 }
 
 .box:before {
@@ -26,12 +27,10 @@
 }
 
 .box p {
-    position: absolute;
-    top: 10%;
-    left: 35%;
-    margin: 0;
-    padding: 0;
-    color: #00FFFF; /*文字は白に*/
+    position: relative;
+    top: 5%;
+    display: inline-block;
+    color: #00ffff; /*文字は白に*/
     font-weight: bold; /*太字に*/
     font-size: 4em; /*サイズ2倍*/
     font-family: Quicksand, sans-serif; /*Google Font*/

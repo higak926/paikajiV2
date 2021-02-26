@@ -15,16 +15,25 @@
  */
 @import "bootstrap";
 
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
 .main {
     min-height: 100vh;
     position: relative; /*←相対位置*/
     padding-bottom: 120px; /*←footerの高さ*/
     box-sizing: border-box; /*←全て含めてmin-height:100vhに*/
-    height: 100%;
+    // height: 100vh;
 }
 
-.main__head{
-    background-color: #FFFFEE;
+.main__head {
+    background-color: #ffffee;
 }
 
 header {
@@ -95,55 +104,10 @@ header {
 }
 
 .p__body {
-    // background-color: #8be4f0;
-    // background-image: linear-gradient(-90deg, #80deea 50%, transparent 50%, transparent);
-    // background-size: 14px 14px;
-
-    // background-size: 20px 20px;
-    // background-color: #CCFFFF;
-    // background-image: linear-gradient(
-    //         45deg,
-    //         #99FFFF 25%,
-    //         transparent 25%,
-    //         transparent 50%,
-    //         #99FFFF 50%,
-    //         #99FFFF 75%,
-    //         transparent 75%,
-    //         transparent
-    //     ),
-    //     linear-gradient(
-    //         -45deg,
-    //         #99FFFF 25%,
-    //         transparent 25%,
-    //         transparent 50%,
-    //         #99FFFF 50%,
-    //         #99FFFF 75%,
-    //         transparent 75%,
-    //         transparent
-    //     );
-
-    // background-color: #CCFFFF;
-    // background-image: linear-gradient(
-    //         45deg,
-    //         #99FFFF 25%,
-    //         transparent 25%,
-    //         transparent 75%,
-    //         #99FFFF 75%,
-    //         #99FFFF
-    //     ),
-    //     linear-gradient(
-    //         -45deg,
-    //         #99FFFF 25%,
-    //         transparent 25%,
-    //         transparent 75%,
-    //         #99FFFF 75%,
-    //         #99FFFF
-    //     );
-    // background-size: 20px 20px;
-    // background-position: 0 0, 10px 10px;
-
     background-image: image-url("back.jpg");
     padding: 0 0 30px 0;
+    height: auto;
+    min-height: 100vh;
 }
 
 footer {
