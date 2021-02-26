@@ -2,7 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.mem__tya{
-  padding-top: 1em;
-  padding-bottom: 1em;
+
+.member__img {
+  img {
+    border-radius: 100%; /* 角丸半径を50%にする(=円形にする) */
+    width: 100%; /* 縦横を同じ値にする */
+    height: 100%; /* 縦横を同じ値にする */
+    object-fit: cover; /* 縦横比固定したまま上2つの縦横の範囲内に収まるように配置する */
+  }
+}
+
+table,
+td {
+    border: 1px solid #333;
+    font-size: 120%;
+    background-color: white;
+}
+
+thead,
+tfoot {
+    background-color: #005FFF;
+    color: #fff;
+    text-align: center;
+    font-size: 150%;
 }
