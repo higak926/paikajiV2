@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .member__img {
   img {
     border-radius: 100%; /* 角丸半径を50%にする(=円形にする) */
@@ -14,15 +13,26 @@
 
 table,
 td {
-    border: 1px solid #333;
-    font-size: 120%;
-    background-color: white;
+  // border: 1px solid gray;
+  font-size: 120%;
+  background-color: white;
+  box-shadow: 0 0 2px gray;
+}
+
+table {
+  thead {
+    tr {
+      th {
+        background-color: navy;
+      }
+    }
+  }
 }
 
 thead,
 tfoot {
-    background-color: #005FFF;
-    color: #fff;
-    text-align: center;
-    font-size: 150%;
+  color: white;
+  text-align: center;
+  font-size: 150%;
+  box-shadow: 0 0 2px gray;
 }
