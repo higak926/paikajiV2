@@ -26,16 +26,6 @@
     padding-top: 50%;
 }
 
-.box p {
-    position: relative;
-    top: 5%;
-    display: inline-block;
-    color: #00ffff; /*文字は白に*/
-    font-weight: bold; /*太字に*/
-    font-size: 4em; /*サイズ2倍*/
-    font-family: Quicksand, sans-serif; /*Google Font*/
-}
-
 .box .bgImg {
     position: absolute;
     width: 100%;
@@ -43,11 +33,42 @@
     top: 0;
     bottom: 0;
     opacity: 0;
-    // background-size: auto;
     background-size: 100% 100%;
-    // background-size: contain;
-    // background-repeat: no-repeat;
     animation: bgAnime 20s infinite; /* 4画像 × 各5s = 20s */
+
+    p {
+        position: relative;
+        top: 5%;
+        display: inline-block;
+        color: #00ffff; /*文字は白に*/
+        font-weight: bold; /*太字に*/
+        font-size: 4em; /*サイズ2倍*/
+        font-family: Quicksand, sans-serif; /*Google Font*/
+    }
+
+    @media (max-width: 480px) {
+        p {
+            position: relative;
+            top: 5%;
+            display: inline-block;
+            color: #00ffff; /*文字は白に*/
+            font-weight: bold; /*太字に*/
+            font-size: 1.5em; /*サイズ2倍*/
+            font-family: Quicksand, sans-serif; /*Google Font*/
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 1023px){
+        p {
+            position: relative;
+            top: 5%;
+            display: inline-block;
+            color: #00ffff; /*文字は白に*/
+            font-weight: bold; /*太字に*/
+            font-size: 2em; /*サイズ2倍*/
+            font-family: Quicksand, sans-serif; /*Google Font*/
+        }
+    }
 }
 
 /* --- 段差で背景画像のアニメーションを実行 ----------------- */

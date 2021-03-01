@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+
 <head>
   <title>南風第二章</title>
   <% if content_for?(:html_description) %>
@@ -19,41 +21,7 @@
     <div class="main__head">
       <div class="container">
         <header>
-          <div class="logo">
-            <a href="/"><%= image_tag "home_logo.png" %></a>
-          </div>
-          <nav>
-            <% if user_signed_in? %>
-            <ul>
-              <div class="btn btn-success whitecor-link">
-                <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
-              </div>
-              <div class="btn btn-secondary whitecor-link">
-                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-              </div>
-            </ul>
-            <% else %>
-            <ul>
-              <div class="btn btn-outline-primary bluecor-link">
-                <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-              </div>
-              <div class="btn btn-primary whitecor-link">
-                <li><%= link_to 'ログイン', new_user_session_path %></li>
-              </div>
-            </ul>
-
-
-            <% end %>
-          </nav>
-          <div class="navi">
-            　　<ul>
-              　　　　<li><a href="/">ホーム</a></li>
-              　　　　<li><a href="/histories">南風の歴史</a></li>
-              　　　　<li><a href="/members">メンバー</a></li>
-              　　　　<li><a href="#">活動内容</a></li>
-              　　　　<li><a href="#">お問い合わせ</a></li>
-            </ul>
-          </div>
+          <%= render 'layouts/header' %>
         </header>
       </div>
     </div>
@@ -61,7 +29,7 @@
     <div class="p__body">
       <%= yield %>
     </div>
-    
+
     <footer>
       <p>©️ Paikaji 2nd Project All Rights Reserved.</p>
     </footer>

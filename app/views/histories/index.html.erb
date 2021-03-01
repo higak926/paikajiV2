@@ -1,26 +1,25 @@
 <div class="container">
   <div class="row">
-    <div class="col-12">
+    <div class="col-md-12">
       <h1>
         南風の歴史
       </h1>
     </div>
   </div>
-
   <div class="row">
     <% @histories.each do |history| %>
     <% if history.id.odd? %>
-    <div class="col-6" Style="padding: 0;">
+    <div class="col-md-6" Style="padding: 0;">
       <%= image_tag history.image_path %>
     </div>
-    <div class="col-6 introduction" Style="padding: 0;">
+    <div class="col-md-6 introduction" Style="padding: 0;">
       <div class="title">
         <p> <%= history.year %>　テーマ：<%= history.theme %></p>
       </div>
       <p>詳細：<%= history.details %></p>
     </div>
     <% else %>
-    <div class="col-6 introduction" Style="padding: 0;">
+    <div class="col-md-6 introduction" Style="padding: 0;">
       <div class="introduction">
         <div class="title">
           <p> <%= history.year %>　テーマ：<%= history.theme %></p>
@@ -28,12 +27,10 @@
         <p>詳細：<%= history.details %></p>
       </div>
     </div>
-    <div class="col-6" Style="padding: 0;">
+    <div class="col-md-6" Style="padding: 0;">
       <%= image_tag history.image_path %>
     </div>
     <% end %>
     <% end %>
   </div>
-
-
 </div>

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-light navbar-expand-md">
+  <div class="logo">
+    <a href="/"><%= image_tag "home_logo.png" %></a>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsiveMenu" aria-controls="responsiveMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="responsiveMenu">
+    <ul class="mr-auto navi">
+      <li class="nav-item">
+        <a href="/">ホーム</a>
+      </li>
+      <li class="nav-item">
+        <a href="/histories">南風の歴史</a>
+      </li>
+      <li class="nav-item">
+        <a href="/members">メンバー</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">活動内容</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">お問い合わせ</a>
+      </li>
+    </ul>
+
+    <div class="head__btn">
+      <ul>
+        <% if user_signed_in? %>
+        <div class="btn btn-success whitecor-link">
+          <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+        </div>
+        <div class="btn btn-secondary whitecor-link">
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+        </div>
+        <% else %>
+        <div class="btn btn-outline-primary bluecor-link">
+          <li class="nav-item"><%= link_to 'サインアップ', new_user_registration_path %></li>
+        </div>
+        <div class="btn btn-primary whitecor-link">
+          <li class="nav-item"><%= link_to 'ログイン', new_user_session_path %></li>
+        </div>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+</nav>

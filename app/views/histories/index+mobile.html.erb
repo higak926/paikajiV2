@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <% @histories.each do |history| %>
+    <div class="col-md-6" Style="padding: 0;">
+      <%= image_tag history.image_path %>
+    </div>
+    <div class="col-md-6 introduction" Style="padding: 0;">
+      <div class="title">
+        <p> <%= history.year %>　テーマ：<%= history.theme %></p>
+      </div>
+      <p>詳細：<%= history.details %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
