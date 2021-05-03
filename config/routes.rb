@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'activities/index'
   ActiveAdmin.routes(self)
   root 'home#index'
 
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'histories', to: 'histories#index'
   get 'members', to: 'members#index'
+  get 'activities', to: 'activities#index'
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',
