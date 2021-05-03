@@ -11,4 +11,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
     devise_parameter_sanitizer.permit(:account_update, keys: [:username, :introduction])
   end
+
+  def authenticate_admin_user!
+    unless current_user.try(:admin?)
+      flash[:danger] = "管理者用ページです。権限があるアカウントでログインしてください!"
+      redirect_to root_path
+    end
+  end
 end

@@ -7,159 +7,189 @@
 }
 
 .home__mod1 {
-    background: linear-gradient(#eeffff, #00ffff);
+    background   : linear-gradient(#eeffff, #00ffff);
     margin-bottom: 2em;
     border-radius: 25px;
-    box-shadow: 0 0 2px gray;
-    padding: 1em;
+    box-shadow   : 0 0 2px gray;
+    padding      : 1em;
 }
 
 .box {
-    position: relative;
-    width: 100%;
+    position  : relative;
+    width     : 100%;
     text-align: center;
 }
 
 .box:before {
-    content: "";
-    display: block;
+    content    : "";
+    display    : block;
     padding-top: 50%;
 }
 
 .box .bgImg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    opacity: 0;
+    position       : absolute;
+    width          : 100%;
+    height         : 100%;
+    top            : 0;
+    bottom         : 0;
+    opacity        : 0;
     background-size: 100% 100%;
-    animation: bgAnime 20s infinite; /* 4画像 × 各5s = 20s */
+    animation      : bgAnime 20s infinite;
+    /* 4画像 × 各5s = 20s */
 
     p {
-        position: relative;
-        top: 5%;
-        display: inline-block;
-        color: #00ffff; /*文字は白に*/
-        font-weight: bold; /*太字に*/
-        font-size: 4em; /*サイズ2倍*/
-        font-family: Quicksand, sans-serif; /*Google Font*/
+        position   : relative;
+        top        : 5%;
+        display    : inline-block;
+        color      : #00ffff;
+        /*文字は白に*/
+        font-weight: bold;
+        /*太字に*/
+        font-size  : 4em;
+        /*サイズ2倍*/
+        font-family: Quicksand, sans-serif;
+        /*Google Font*/
     }
 
     @media (max-width: 480px) {
         p {
-            position: relative;
-            top: 5%;
-            display: inline-block;
-            color: #00ffff; /*文字は白に*/
-            font-weight: bold; /*太字に*/
-            font-size: 1.5em; /*サイズ2倍*/
-            font-family: Quicksand, sans-serif; /*Google Font*/
+            position   : relative;
+            top        : 5%;
+            display    : inline-block;
+            color      : #00ffff;
+            /*文字は白に*/
+            font-weight: bold;
+            /*太字に*/
+            font-size  : 1.3em;
+            /*サイズ2倍*/
+            font-family: Quicksand, sans-serif;
+            /*Google Font*/
         }
     }
 
-    @media (min-width: 481px) and (max-width: 1023px){
+    @media (min-width: 481px) and (max-width: 1023px) {
         p {
-            position: relative;
-            top: 5%;
-            display: inline-block;
-            color: #00ffff; /*文字は白に*/
-            font-weight: bold; /*太字に*/
-            font-size: 2em; /*サイズ2倍*/
-            font-family: Quicksand, sans-serif; /*Google Font*/
+            position   : relative;
+            top        : 5%;
+            display    : inline-block;
+            color      : #00ffff;
+            /*文字は白に*/
+            font-weight: bold;
+            /*太字に*/
+            font-size  : 2em;
+            /*サイズ2倍*/
+            font-family: Quicksand, sans-serif;
+            /*Google Font*/
         }
     }
 }
 
 /* --- 段差で背景画像のアニメーションを実行 ----------------- */
 .box .src1 {
-    background-image: image-url("05_image1.jpg"); /* 背景の画像を指定 */
+    background-image: image-url("05_image1.jpg");
+    /* 背景の画像を指定 */
 }
+
 .box .src2 {
-    background-image: image-url("06_image1.jpg"); /* 背景の画像を指定 */
-    animation-delay: 5s;
+    background-image: image-url("06_image1.jpg");
+    /* 背景の画像を指定 */
+    animation-delay : 5s;
 }
+
 .box .src3 {
-    background-image: image-url("07_image1.jpg"); /* 背景の画像を指定 */
-    animation-delay: 10s;
+    background-image: image-url("07_image1.jpg");
+    /* 背景の画像を指定 */
+    animation-delay : 10s;
 }
+
 .box .src4 {
-    background-image: image-url("08_image1.jpg"); /* 背景の画像を指定 */
-    animation-delay: 15s;
+    background-image: image-url("08_image1.jpg");
+    /* 背景の画像を指定 */
+    animation-delay : 15s;
 }
 
 @keyframes bgAnime {
     0% {
         opacity: 0;
     }
+
     5% {
         opacity: 1;
     }
+
     25% {
         opacity: 1;
     }
+
     30% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
 }
 
 .home__mod2 {
-    background: white;
+    background   : white;
     margin-bottom: 2em;
     border-radius: 0 0 25px 25px;
-    border-top: inset 10px lightskyblue;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.22);
-    padding: 1em;
+    border-top   : inset 10px blue;
+    box-shadow   : 0 0 10px 0 rgba(0, 0, 0, 0.22);
+    padding      : 1em;
 }
 
 .slide__image {
     a {
         text-decoration: none;
+
         .histories {
             background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height: 300px;
-            background-image: image-url("paikaji_history.jpg");
+            background-size  : 100% 100%;
+            height           : 300px;
+            background-image : image-url("paikaji_history.jpg");
+
             p {
-                width: 32%;
-                text-align: center;
-                color: white;
-                background: skyblue;
+                width      : 32%;
+                text-align : center;
+                color      : white;
+                background : skyblue;
                 font-weight: bold;
-                font-size: 1.5em;
+                font-size  : 1.5em;
                 font-family: Quicksand, sans-serif;
             }
         }
+
         .members {
             background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height: 300px;
-            background-image: image-url("members.jpg");
+            background-size  : 100% 100%;
+            height           : 300px;
+            background-image : image-url("members.jpg");
+
             p {
-                width: 32%;
-                text-align: center;
-                color: white;
-                background: skyblue;
+                width      : 32%;
+                text-align : center;
+                color      : white;
+                background : skyblue;
                 font-weight: bold;
-                font-size: 1.5em;
+                font-size  : 1.5em;
                 font-family: Quicksand, sans-serif;
             }
         }
+
         .activity {
             background-repeat: no-repeat;
-            background-size: 100% 100%;
-            height: 300px;
-            background-image: image-url("comming_soon.png");
+            background-size  : 100% 100%;
+            height           : 300px;
+            background-image : image-url("comming_soon.png");
+
             p {
-                width: 32%;
-                text-align: center;
-                color: white;
-                background: skyblue;
+                width      : 32%;
+                text-align : center;
+                color      : white;
+                background : skyblue;
                 font-weight: bold;
-                font-size: 1.5em;
+                font-size  : 1.5em;
                 font-family: Quicksand, sans-serif;
             }
         }
@@ -169,10 +199,105 @@
 .slick-dots {
     li {
         font-size: 20px !important;
+
         button:before {
-            content: "★" !important;
+            content  : "★" !important;
             font-size: 14px !important;
-            color: rgb(60, 60, 60) !important;
+            color    : rgb(60, 60, 60) !important;
         }
     }
+}
+
+.shiny-btn1 {
+    display         : block;
+    position        : relative;
+    width           : 100%;
+    /*ボタンの幅*/
+    padding         : 10px 0;
+    background-color: lightblue;
+    /*ボタンの色*/
+    box-shadow      : 0 3px 0 0 lightblue;
+    /*影の色(rgbaの値を変更)*/
+    border-radius   : 5px;
+    font-weight     : bold;
+    text-align      : center;
+    text-decoration : none;
+    overflow        : hidden;
+    margin-bottom: 1.5em;
+    color: white;
+
+    @media (max-width: 480px) {
+        a {
+            font-size: 100%;
+            color: white;
+        }
+    }
+
+    @media (min-width: 481px) {
+        a {
+            font-size: 150%;
+            color: white;
+        }
+    }
+}
+
+.shiny-btn1:hover {
+    text-decoration: none;
+    color          : #fff;
+}
+
+.shiny-btn1::before {
+    position        : absolute;
+    content         : '';
+    display         : inline-block;
+    top             : -180px;
+    left            : 0;
+    width           : 30px;
+    height          : 100%;
+    background-color: #fff;
+    animation       : shiny-btn1 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes shiny-btn1 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity          : 0;
+    }
+
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity          : 0.5;
+    }
+
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity          : 1;
+    }
+
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity          : 0;
+    }
+}
+
+.date {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.date:before,
+.date:after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: #666;
+}
+
+.date:before {
+    margin-right: 1rem;
+}
+
+.date:after {
+    margin-left: 1rem;
 }

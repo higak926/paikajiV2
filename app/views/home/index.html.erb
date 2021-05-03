@@ -4,32 +4,7 @@
 
 <% content_for(:html_description) { "南風第二章の概要や活動内容、愉快なメンバーをご紹介します！" } %>
 
-<div class="box">
-  <div class="bgImg src1">
-    <p>
-      最高の仲間たちと　歴史を紡いでゆく<br>
-      <span style="color: #FF00FF;">南風第二章　始動</span>
-    </p>
-  </div>
-  <div class="bgImg src2">
-    <p>
-      最高の仲間たちと　歴史を紡いでゆく<br>
-      <span style="color: #FF00FF;">南風第二章　始動</span>
-    </p>
-  </div>
-  <div class="bgImg src3">
-    <p>
-      最高の仲間たちと　歴史を紡いでゆく<br>
-      <span style="color: #FF00FF;">南風第二章　始動</span>
-    </p>
-  </div>
-  <div class="bgImg src4">
-    <p>
-      最高の仲間たちと　歴史を紡いでゆく<br>
-      <span style="color: #FF00FF;">南風第二章　始動</span>
-    </p>
-  </div>
-</div>
+<%= render 'home/topImages' %>
 
 <div class="container">
   <div class="row">
@@ -83,50 +58,5 @@
     </div>
   </div>
 
-  <div class="home__mod2">
-    <div class="row">
-      <div class="col-12">
-        <h2 style="text-align: center;">最近の活動</h2>
-      </div>
-
-      <div class="col-md-8">
-        <p>2021/2/13(土)</p>
-        <p>★代々木公園で安里屋ゆんたを踊ってみました★</p>
-        <p>場所：代々木公園<br>
-        曲　：「安里屋ゆんた」</p>
-      </div>
-      <div class="col-md-4" style="margin-bottom: 20px;">
-        <iframe src="https://www.youtube.com/embed/FFRVY_pyZ84" frameborder="0" allow="fullscreen" width="100%"></iframe>
-      </div>
-
-      <div class="col-md-8">
-        <p>2021/1/31(日)</p>
-        <p>★新年初叩き！安里屋ゆんたを子供たちと踊りました★</p>
-        <p>場所：代々木公園<br>
-        曲　：「安里屋ゆんた」</p>
-      </div>
-      <div class="col-md-4" style="margin-bottom: 20px;">
-        <iframe src="https://www.youtube.com/embed/ex4HtslMVCU" frameborder="0" allow="fullscreen" width="100%"></iframe>
-      </div>
-
-      <div class="col-md-8">
-        <p>2020/1/24(日)</p>
-        <p>★エイサーの締め太鼓を作ってみました★</p>
-        <p>場所：House In ちゃぶ</p>
-      </div>
-      <div class="col-md-4" style="margin-bottom: 20px;">
-        <iframe src="https://www.youtube.com/embed/yTjnIarKQug" frameborder="0" allow="fullscreen" width="100%"></iframe>
-      </div>
-
-      <div class="col-md-8">
-        <p>2020/12/23(水)</p>
-        <p>★南風第二章初の動画をyoutubeにアップしました★</p>
-        <p>場所：代々木公園<br>
-        曲　：南風05 「くだか」</p>
-      </div>
-      <div class="col-md-4" style="margin-bottom: 20px;">
-        <iframe src="https://www.youtube.com/embed/zwGQ1OFMDto" frameborder="0" allow="fullscreen" width="100%"></iframe>
-      </div>
-    </div>
-  </div>
+  <%= render 'home/activities' %>
 </div>
