@@ -25,4 +25,5 @@ $(function() {
       autoplay: true,
       autoplaySpeed: 2500,
   });
+  $('.now-alert').fadeOut(3000);
 });
