@@ -2,7 +2,18 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(_resource)
-    "/user/#{current_user.id}"
+    if current_user
+      flash[:notice] = "ログインしましたよ" 
+      root_url
+    else
+      flash[:notice] = "ログインに失敗しました" 
+      root_url
+    end
+  end
+
+  def after_sign_out_path_for(resource)
+    flash[:alert] = "ログアウトしました"
+    root_path
   end
 
   protected
