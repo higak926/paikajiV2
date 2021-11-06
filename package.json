@@ -2,7 +2,9 @@
   "name": "app",
   "private": true,
   "dependencies": {
+    "@prettier/plugin-ruby": "^2.0.0",
     "@rails/webpacker": "5.2.1",
+    "prettier": "^1.19.1",
     "vue": "^2.6.12",
     "vue-loader": "^15.9.4",
     "vue-template-compiler": "^2.6.12"

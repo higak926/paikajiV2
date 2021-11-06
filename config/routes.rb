@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'histories', to: 'histories#index'
   get 'members', to: 'members#index'
   get 'activities', to: 'activities#index'
+  get 'contact', to: 'contact#index'
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',
