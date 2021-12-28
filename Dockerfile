@@ -1,4 +1,4 @@
-FROM ruby:2.6.2-alpine3.9
+FROM ruby:2.7.3-alpine
 ARG RAILS_ENV="development"
 ARG RAILS_MASTER_KEY
 
@@ -12,6 +12,7 @@ RUN apk add --update build-base \
                      less \
                      vim \
                      coreutils \
+    && gem install bundler:1.17.2 \
     && rm -rf /var/cache/apk/* \
     && cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
     && echo 'gem: --no-document' > ~/.gemrc \
