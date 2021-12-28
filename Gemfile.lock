@@ -65,7 +65,7 @@ GEM
       mime-types (>= 2.99)
       unf
     ast (2.4.2)
-    autoprefixer-rails (10.3.3.0)
+    autoprefixer-rails (10.4.0.0)
       execjs (~> 2)
     bcrypt (3.1.16)
     bindex (0.8.1)
@@ -292,7 +292,7 @@ GEM
       rubocop-ast (>= 1.15.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.15.0)
+    rubocop-ast (1.15.1)
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
