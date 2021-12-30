@@ -46,8 +46,8 @@ gem "jquery-turbolinks"
 gem "ridgepole"
 gem "webpacker"
 gem "dotenv-rails"
-gem "fog-aws"
-gem "asset_sync"
+# gem "fog-aws"
+# gem "asset_sync"
 
 gem "unicorn", "5.4.1"
 
