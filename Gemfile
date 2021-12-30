@@ -62,6 +62,7 @@ end
 
 group :production do
   # gem "mini_racer"
+  gem 'pg'
 end
 
 group :development do
